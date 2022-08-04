@@ -1,0 +1,14 @@
+{
+  "user": {
+    "name": "da",
+    "password": "кцфв"
+  },
+  "contacts": [
+    {
+      "id": 1,
+      "name": "Bob",
+      "description": "Call me!",
+      "phone": "+7(965)193-77-05"
+    }
+  ]
+}
