@@ -1,14 +1,18 @@
 {
   "user": {
-    "name": "da",
-    "password": "кцфв"
+    "name": "1email1@mail.ru",
+    "password": "123321123321"
   },
   "contacts": [
     {
-      "id": 1,
       "name": "Bob",
       "description": "Call me!",
       "phone": "+7(965)193-77-05"
+    },
+    {
+      "name": "Tom",
+      "description": "Do not call me!",
+      "phone": "+7(923)153-21-65"
     }
   ]
 }

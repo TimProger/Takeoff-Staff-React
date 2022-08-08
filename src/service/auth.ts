@@ -1,6 +1,5 @@
 import {getData, postData} from "../http/fetch";
 import {SERVER_URL} from "../consts/consts";
-import {IAuthResponse} from "../types/HTTP.types";
 import {IUser} from "../types/User.types";
 
 export default class AuthService {

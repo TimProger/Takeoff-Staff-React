@@ -11,7 +11,7 @@ const AuthForm = () => {
     const { auth } = useActions()
 
     const { register, handleSubmit } = useForm<IUserFormData>();
-    const { user, loading } = useTypedSelector(state => state.user)
+
     return (
         <form onSubmit={handleSubmit((data) => {
             auth(data)
@@ -19,7 +19,6 @@ const AuthForm = () => {
             <TextField {...register("name")} name={'name'} label="Логин" variant="standard" />
             <TextField {...register("password")} name={'password'} label="Пароль" variant="standard" type={'password'} />
             <Button type={'submit'} variant="contained">Авторизация</Button>
-            {loading ? <p>Идёт загрузка</p> : user ? <p>{user.name}</p> : null}
         </form>
     );
 };

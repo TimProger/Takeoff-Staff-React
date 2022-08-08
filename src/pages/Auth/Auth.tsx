@@ -1,12 +1,15 @@
 import React from 'react';
 import AuthForm from "../../components/AuthForm/AuthForm";
+import Typography from "@mui/material/Typography";
 
 const Auth = () => {
 
     return (
         <div>
-            <h1>Добро пожаловать на <span>ContactMe</span></h1>
-            <p>Пожалуйста, авторизуйтесь</p>
+            <Typography variant="h4" component="div" gutterBottom>
+                Welcome to <span>ContactMe</span>
+            </Typography>
+            <p>Please login</p>
             <AuthForm />
         </div>
     );
