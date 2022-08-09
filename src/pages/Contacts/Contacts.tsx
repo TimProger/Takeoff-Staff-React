@@ -4,7 +4,7 @@ import Card from "../../components/Card/Card";
 import Typography from "@mui/material/Typography";
 import './Contacts.css'
 
-const Contacts = ({contacts, loading, error, fetchContacts}: IContactsProps) => {
+const Contacts = ({contacts, loading, error, fetchContacts, deleteContact}: IContactsProps) => {
 
     useEffect(() => {
         console.log(1)
@@ -26,7 +26,7 @@ const Contacts = ({contacts, loading, error, fetchContacts}: IContactsProps) => 
                 Contacts
             </Typography>
             {contacts.map((el, index)=>{
-                return <Card key={index} name={el.name} description={el.description} phone={el.phone} />
+                return <Card key={index} name={el.name} description={el.description} phone={el.phone} deleteContact={deleteContact} id={el.id} />
             })}
         </div>
     );

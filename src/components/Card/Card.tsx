@@ -8,10 +8,12 @@ import Typography from '@mui/material/Typography';
 interface ICardProps {
     name: string,
     description: string,
-    phone: string
+    phone: string,
+    deleteContact: (id: number) => void,
+    id: number
 }
 
-const CardContainer = ({name, description, phone}: ICardProps) => {
+const Card_ = ({name, description, phone, deleteContact, id}: ICardProps) => {
     return (
         <Card sx={{ minWidth: 375 }}>
             <CardContent>
@@ -27,9 +29,11 @@ const CardContainer = ({name, description, phone}: ICardProps) => {
             </CardContent>
             <CardActions>
                 <Button size="small" variant="contained">Call</Button>
+                <Button size="small" variant="contained">Update</Button>
+                <Button size="small" variant="contained" onClick={()=>deleteContact(id)}>Delete</Button>
             </CardActions>
         </Card>
     );
 };
 
-export default CardContainer;
+export default Card_;

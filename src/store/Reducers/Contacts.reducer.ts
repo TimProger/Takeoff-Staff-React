@@ -10,10 +10,12 @@ export const ContactsReducer = (state: IContactsState = initialState, action: Co
     switch (action.type) {
         case ContactsActionTypes.FETCH_CONTACTS:
             return {...state, loading: true, error: null, contacts: []}
-        case ContactsActionTypes.FETCH_CONTACTS_ERROR:
+        case ContactsActionTypes.CONTACTS_ERROR:
             return {...state, loading: false, error: action.payload, contacts: []}
         case ContactsActionTypes.FETCH_CONTACTS_SUCCESS:
             return {...state, loading: false, error: null, contacts: action.payload}
+        case ContactsActionTypes.DELETE_CONTACT:
+            return {...state, loading: false, error: null, contacts: state.contacts.filter(el => el.id !== action.payload)}
         default:
             return state
     }

@@ -14,8 +14,25 @@ export const fetchContacts = () => {
             })
         } catch (e) {
             dispatch({
-                type: ContactsActionTypes.FETCH_CONTACTS_ERROR,
+                type: ContactsActionTypes.CONTACTS_ERROR,
                 payload: 'Произошла ошибка при получении постов: ' + e
+            })
+        }
+    }
+}
+
+export const deleteContact = (id: number) => {
+    return async (dispatch: Dispatch<ContactsAction>) => {
+        try {
+            await ContactsService.deleteContact(id)
+            dispatch({
+                type: ContactsActionTypes.DELETE_CONTACT,
+                payload: id
+            })
+        } catch (e) {
+            dispatch({
+                type: ContactsActionTypes.CONTACTS_ERROR,
+                payload: 'Произошла ошибка при удалении поста: ' + e
             })
         }
     }

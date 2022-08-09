@@ -5,11 +5,13 @@
   },
   "contacts": [
     {
+      "id": 0,
       "name": "Bob",
       "description": "Call me!",
       "phone": "+7(965)193-77-05"
     },
     {
+      "id": 1,
       "name": "Tom",
       "description": "Do not call me!",
       "phone": "+7(923)153-21-65"
